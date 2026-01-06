@@ -1,0 +1,100 @@
+.modalTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.modalHeader {
+  border-bottom: 1px solid #f3f3f3;
+  padding: 20px 24px;
+}
+
+.modalBody {
+  padding: 24px;
+}
+
+.totalPrice {
+  background: #f3f3f3;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8px;
+
+  span {
+    color: #4caf50;
+    font-weight: 700;
+  }
+}
+
+.submitButton {
+  background: #4caf50;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-top: 12px;
+
+  &:hover {
+    background: #43a047;
+  }
+
+  &:active {
+    background: #388e3c;
+  }
+}
+
+// Стили для полей ввода с ошибками и подсказками
+:global {
+  .mantine-TextInput-description {
+    color: #868e96;
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .mantine-TextInput-error {
+    color: #fa5252;
+    font-size: 13px;
+    margin-top: 6px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .mantine-TextInput-input[data-invalid] {
+    border-color: #fa5252;
+    background-color: #fff5f5;
+
+    &:focus {
+      border-color: #fa5252;
+      background-color: #fff;
+    }
+  }
+
+  .mantine-TextInput-label[data-invalid] {
+    color: #fa5252;
+  }
+
+  .mantine-TextInput-label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #212529;
+  }
+
+  .mantine-TextInput-input {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px 12px;
+    font-size: 14px;
+
+    &:focus {
+      border-color: #4caf50;
+    }
+
+    &::placeholder {
+      color: #adb5bd;
+    }
+  }
+}

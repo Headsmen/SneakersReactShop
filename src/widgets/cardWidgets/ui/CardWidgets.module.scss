@@ -1,0 +1,140 @@
+.allSneakers {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.card {
+    height: 280px;
+    width: 210px;
+    border: 1px solid #F3F3F3;
+    border-radius: 40px;
+    padding: 20px;
+    position: relative;
+    background: #FFFFFF;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+        transform: translateY(-5px);
+    }
+}
+
+.favoriteBtn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneakerImage {
+    width: 100%;
+    height: 135px;
+    object-fit: contain;
+    margin-bottom: 14px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 14px;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priceLabel {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #BDBDBD;
+    margin-bottom: 2px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.addBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.bannerContainer {
+    width: 100%;
+    max-width: 1300px;
+    margin: 45px auto 0;
+    padding: 0 60px;
+    box-sizing: border-box;
+
+    @media (max-width: 1024px) {
+        padding: 0 30px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 15px;
+        margin-top: 15px;
+    }
+}
+
+.imgPepe {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+
+    @media (max-width: 1024px) {
+        max-height: 350px;
+    }
+
+    @media (max-width: 768px) {
+        max-height: 280px;
+        border-radius: 16px;
+    }
+
+    @media (max-width: 480px) {
+        max-height: 200px;
+        border-radius: 12px;
+    }
+}

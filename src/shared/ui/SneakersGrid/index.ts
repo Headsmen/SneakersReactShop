@@ -1,0 +1,1 @@
+export { SneakersGrid } from './SneakersGrid';
