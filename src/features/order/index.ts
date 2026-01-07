@@ -1,2 +1,1 @@
-export { OrderModal } from './ui/OrderModal';
-export { useOrderModal } from './model/useOrderModal';
+export { useOrderFeature } from './model/useOrderFeature';

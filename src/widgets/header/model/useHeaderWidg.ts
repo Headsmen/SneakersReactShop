@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useShopStore } from '../../../shared/store/shopStore';
+import { useShopStore } from '../../../entities/shop';
 import { useTotalPrice } from '../../../shared/hooks/useTotalPrice';
 
 export const useHeaderWidg = () => {

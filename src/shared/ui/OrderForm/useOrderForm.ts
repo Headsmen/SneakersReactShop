@@ -1,14 +1,16 @@
 import { useForm } from '@mantine/form';
 import { orderSchema, type OrderFormData } from '../../../entities/order';
 
-export const useOrderModal = () => {
+export const useOrderForm = () => {
   const form = useForm<OrderFormData>({
+    mode: 'uncontrolled',
     initialValues: {
       name: '',
       phone: '',
       email: '',
       city: ''
     },
+    validateInputOnBlur: true,
     validate: (values) => {
       try {
         orderSchema.parse(values);

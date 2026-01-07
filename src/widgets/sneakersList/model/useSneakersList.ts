@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { useShopStore } from '../../../shared/store/shopStore';
+import { useShopStore } from '../../../entities/shop';
 import { sneakersData } from '../../../entities/sneaker';
 import { useDebounce } from '../../../shared/hooks/useDebounce';
 

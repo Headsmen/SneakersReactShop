@@ -1,16 +1,14 @@
 import { notifications } from '@mantine/notifications';
-import { useModal } from '../../../app/providers/ModalContext';
-import { useSendOrder } from '../../../shared/hooks/useSendOrder';
-import { useShopStore } from '../../../shared/store/shopStore';
-import type { OrderFormData } from '../../../entities/order';
+import { modals } from '@mantine/modals';
+import { useSendOrder, type OrderFormData } from '../../../entities/order';
+import { useShopStore } from '../../../entities/shop';
 import { formatPrice } from '../../../shared/lib/formatPrice';
 
-export const useCartListOrder = (totalPrice: number) => {
-  const { isOrderModalOpen, closeOrderModal } = useModal();
+export const useOrderFeature = () => {
   const { mutate: sendOrder, isPending } = useSendOrder();
   const { cart, clearCart } = useShopStore();
 
-  const handleOrderSubmit = (data: OrderFormData) => {
+  const handleOrderSubmit = (data: OrderFormData, totalPrice: number) => {
     const orderPayload = {
       ...data,
       items: cart,
@@ -27,7 +25,7 @@ export const useCartListOrder = (totalPrice: number) => {
           autoClose: 5000,
         });
         clearCart();
-        closeOrderModal();
+        modals.closeAll();
       },
       onError: (error) => {
         notifications.show({
@@ -41,8 +39,6 @@ export const useCartListOrder = (totalPrice: number) => {
   };
 
   return {
-    isOrderModalOpen,
-    closeOrderModal,
     handleOrderSubmit,
     isPending,
   };

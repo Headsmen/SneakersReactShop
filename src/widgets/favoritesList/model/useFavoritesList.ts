@@ -1,4 +1,4 @@
-import { useShopStore } from '../../../shared/store/shopStore';
+import { useShopStore } from '../../../entities/shop';
 import { useFilteredSneakers } from '../../../shared/hooks/useFilteredSneakers';
 
 export function useFavoritesList() {

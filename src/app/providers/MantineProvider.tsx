@@ -1,5 +1,6 @@
 import { MantineProvider as Provider, createTheme } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
+import { ModalsProvider } from '@mantine/modals';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import type { ReactNode } from 'react';
@@ -31,8 +32,10 @@ interface MantineProviderProps {
 export const MantineProvider = ({ children }: MantineProviderProps) => {
   return (
     <Provider theme={theme}>
-      <Notifications />
-      {children}
+      <ModalsProvider>
+        <Notifications />
+        {children}
+      </ModalsProvider>
     </Provider>
   );
 };
